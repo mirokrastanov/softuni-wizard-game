@@ -8,6 +8,21 @@ function gameLoop(state, game) {
     const { wizardEl } = game;
 
     // Move Wizard
+    updateWizardPosition(state, game);
+
+    // Spawns NPCs
+    game.createBug(state.bug);
+
+    // Render
+    wizardEl.style.left = wizard.posX + 'px';
+    wizardEl.style.top = wizard.posY + 'px';
+
+    window.requestAnimationFrame(gameLoop.bind(null, state, game));
+}
+
+function updateWizardPosition() {
+    const { wizard } = state;
+
     if (state.keys.KeyA) {
         wizard.posX = Math.max(wizard.posX - wizard.speed, 0)
     }
@@ -20,10 +35,4 @@ function gameLoop(state, game) {
     if (state.keys.KeyW) {
         wizard.posY = Math.max(wizard.posY - wizard.speed, 0);
     }
-
-    // Render
-    wizardEl.style.left = wizard.posX + 'px';
-    wizardEl.style.top = wizard.posY + 'px';
-
-    window.requestAnimationFrame(gameLoop.bind(null, state, game));
 }

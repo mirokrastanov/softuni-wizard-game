@@ -21,5 +21,14 @@ function initGameObjects() {
             
             return wizardEl;
         },
+        createBug(stats) {
+            const bugEl = document.createElement('div');
+            bugEl.classList.add('bug');
+            bugEl.style.width = stats.width + 'px';
+            bugEl.style.height = stats.height + 'px';
+            bugEl.style.left = gameScreen.offsetWidth - stats.width + 'px';
+            bugEl.style.top = Math.floor(Math.random() * gameScreen.offsetHeight - stats.height) + 'px';
+            gameScreen.appendChild(bugEl);
+        },
     }
 }

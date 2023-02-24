@@ -1,5 +1,5 @@
 function initState() {
-    let startX = Math.floor(Math.random() * 1000);
+    let startX = Math.floor(Math.random() * 500);
     let startY = Math.floor(Math.random() * 500);
 
     const state = {
@@ -9,9 +9,18 @@ function initState() {
             height: 100,
             posX: startX,
             posY: startY,
-            speed: 7,
+            speed: 10,
         },
-        keys: {},
+        bug: {
+            width: 50,
+            height: 50,
+        },
+        keys: {
+            keyA: false,
+            keyS: false,
+            keyD: false,
+            keyW: false,
+        },
     }
 
     return state;
