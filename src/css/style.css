@@ -60,8 +60,43 @@
 .score {
     position: absolute;
     left: 100px;
-    top: 10px;
+    top: 0px;
     font-size: 20px;
+    z-index: 100;
+    width: fit-content;
+    background-color: rgb(255, 228, 196);
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.score-final {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+}
+
+.start-over {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    width: 400px;
+    background-color: bisque;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.start-over:hover {
+    background-color: rgb(255, 199, 131);
+    cursor: pointer;
+    box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.5);
 }
 
 .hidden {
