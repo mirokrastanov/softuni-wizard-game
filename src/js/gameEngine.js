@@ -25,7 +25,11 @@ function gameLoop(state, game, timestamp) {
     // currently done - same, but moving ALL together, instead of separately
     document.querySelectorAll('.bug').forEach(bug => {
         let posX = parseInt(bug.style.left);
-        bug.style.left = posX - state.bug.speed + 'px';
+        if (posX > 0) {
+            bug.style.left = posX - state.bug.speed + 'px';
+        } else {
+            bug.remove();
+        }
     });
 
 
