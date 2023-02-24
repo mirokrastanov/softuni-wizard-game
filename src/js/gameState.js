@@ -4,6 +4,7 @@ function initState() {
 
     const state = {
         player: 'Dozer',
+        gameover: false,
         wizard: {
             width: 82,
             height: 100,

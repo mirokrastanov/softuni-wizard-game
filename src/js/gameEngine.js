@@ -32,11 +32,15 @@ function gameLoop(state, game, timestamp) {
     wizardEl.style.top = wizard.posY + 'px';
 
     // Render bugs
-    //------ TODO - add an array to hold spawned bugs and move them separateyly, based on their x,y coords
-    //------ currently done - same, but moving ALL together, instead of separately
+            // TODO - add an array to hold spawned bugs and move them separateyly, based on their x,y coords
+            // currently done - same, but moving ALL together, instead of separately
     let bugElements = document.querySelectorAll('.bug');
     bugElements.forEach(bug => {
         let posX = parseInt(bug.style.left);
+
+        if (detectCollision(wizardEl, bug)) {
+            state.gameover = true;
+        }
         if (posX > 0) {
             bug.style.left = posX - state.bug.speed + 'px';
         } else {
@@ -64,8 +68,11 @@ function gameLoop(state, game, timestamp) {
 
     });
 
-
-    window.requestAnimationFrame(gameLoop.bind(null, state, game));
+    if (!state.gameover) {
+        window.requestAnimationFrame(gameLoop.bind(null, state, game));
+    } else {
+        alert('Game Over!')
+    }
 }
 
 function updateWizardPosition() {
