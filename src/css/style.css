@@ -32,12 +32,19 @@
     box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.5);
 }
 
-.hidden {
-    display: none;
-}
-
 .game-screen {
     width: 100%;
     height: 100%;
-    
+}
+
+.wizard {
+    position: absolute;
+    background-image: url('../images/wizard.png');
+    width: 82px;
+    height: 100px;
+}
+
+
+.hidden {
+    display: none;
 }
