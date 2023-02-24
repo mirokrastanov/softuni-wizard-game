@@ -13,7 +13,10 @@ function gameLoop(state, game, timestamp) {
     // Wizard spell casting
     if (state.keys.Space) {
         wizardEl.style.backgroundImage = 'url("/src/images/wizard-fire.png")';
-        game.createFireball(wizard, state.fireball);
+        if (timestamp > state.fireball.nextSpawned) {
+            game.createFireball(wizard, state.fireball);
+            state.fireball.nextSpawned = timestamp + state.fireball.maxInterval; 
+        }
     } else {
         wizardEl.style.backgroundImage = 'url("/src/images/wizard.png")';
     }
