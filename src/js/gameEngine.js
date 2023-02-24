@@ -6,6 +6,7 @@ function start(state, game) {
 function gameLoop(state, game, timestamp) {
     const { wizard } = state;
     const { wizardEl } = game;
+    game.scoreElement.textContent = `${state.score} pts.`;
 
     // Move Wizard
     updateWizardPosition(state, game);
@@ -15,7 +16,7 @@ function gameLoop(state, game, timestamp) {
         wizardEl.style.backgroundImage = 'url("/src/images/wizard-fire.png")';
         if (timestamp > state.fireball.nextSpawned) {
             game.createFireball(wizard, state.fireball);
-            state.fireball.nextSpawned = timestamp + state.fireball.maxInterval; 
+            state.fireball.nextSpawned = timestamp + state.fireball.maxInterval;
         }
     } else {
         wizardEl.style.backgroundImage = 'url("/src/images/wizard.png")';
@@ -32,8 +33,8 @@ function gameLoop(state, game, timestamp) {
     wizardEl.style.top = wizard.posY + 'px';
 
     // Render bugs
-            // TODO - add an array to hold spawned bugs and move them separateyly, based on their x,y coords
-            // currently done - same, but moving ALL together, instead of separately
+    // TODO - add an array to hold spawned bugs and move them separateyly, based on their x,y coords
+    // currently done - same, but moving ALL together, instead of separately
     let bugElements = document.querySelectorAll('.bug');
     bugElements.forEach(bug => {
         let posX = parseInt(bug.style.left);
@@ -55,6 +56,7 @@ function gameLoop(state, game, timestamp) {
         // Detect collision
         bugElements.forEach(bug => {
             if (detectCollision(bug, fireball)) {
+                state.score += state.killpts;
                 bug.remove();
                 fireball.remove();
             }
@@ -69,9 +71,12 @@ function gameLoop(state, game, timestamp) {
     });
 
     if (!state.gameover) {
+        state.score += state.scoreRate;
         window.requestAnimationFrame(gameLoop.bind(null, state, game));
     } else {
-        alert('Game Over!')
+        alert(`Game over! Points: ${state.score}`);
+        game.startScreen.classList.remove('hidden');
+        game.gameScreen.classList.add('hidden');
     }
 }
 
@@ -97,7 +102,7 @@ function detectCollision(objectA, objectB) {
     let second = objectB.getBoundingClientRect();
 
     let hasCollision = !(first.top > second.bottom || first.bottom < second.top ||
-    first.right < second.left || first.left > second.right);
+        first.right < second.left || first.left > second.right);
 
     return hasCollision;
 }

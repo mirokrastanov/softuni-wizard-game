@@ -1,10 +1,12 @@
 function initGameObjects() {
     const startScreen = document.querySelector('.start-screen');
     const gameScreen = document.querySelector('.game-screen');
+    const scoreElement = document.querySelector('.score');
 
     return {
         startScreen,
         gameScreen,
+        scoreElement,
         createWizard(initialState) {
             let wizardEl = document.createElement('div');
             wizardEl.classList.add('wizard');

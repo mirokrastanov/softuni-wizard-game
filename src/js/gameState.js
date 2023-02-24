@@ -5,6 +5,9 @@ function initState() {
     const state = {
         player: 'Dozer',
         gameover: false,
+        score: 0,
+        scoreRate: 1,
+        killpts: 1000,
         wizard: {
             width: 82,
             height: 100,

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
+    font-family: 'Prototype';
 }
 
 .game {
@@ -14,7 +15,6 @@
 
 .start-screen {
     font-size: 48px;
-    font-family: 'Prototype';
     width: 500px;
     background-color: bisque;
     position: absolute;
@@ -55,6 +55,13 @@
     position: absolute;
     background-image: url('/src/images/fire-ball.png');
     background-size: cover;
+}
+
+.score {
+    position: absolute;
+    left: 100px;
+    top: 10px;
+    font-size: 20px;
 }
 
 .hidden {
