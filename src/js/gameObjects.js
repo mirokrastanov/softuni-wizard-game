@@ -2,11 +2,17 @@ function initGameObjects() {
     const startScreen = document.querySelector('.start-screen');
     const gameScreen = document.querySelector('.game-screen');
     const scoreElement = document.querySelector('.score');
+    const finalScoreElement = document.querySelector('.score-final');
+    const gameoverScreen = document.querySelector('.gameover-screen'); 
+    const playAgain = document.querySelector('.start-over');
 
     return {
         startScreen,
+        finalScoreElement,
+        gameoverScreen,
         gameScreen,
-        scoreElement,
+        playAgain,
+        scoreElement, 
         createWizard(initialState) {
             let wizardEl = document.createElement('div');
             wizardEl.classList.add('wizard');

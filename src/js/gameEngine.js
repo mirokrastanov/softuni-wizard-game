@@ -74,9 +74,10 @@ function gameLoop(state, game, timestamp) {
         state.score += state.scoreRate;
         window.requestAnimationFrame(gameLoop.bind(null, state, game));
     } else {
-        alert(`Game over! Points: ${state.score}`);
-        game.startScreen.classList.remove('hidden');
         game.gameScreen.classList.add('hidden');
+        game.gameoverScreen.classList.remove('hidden');
+        game.finalScoreElement.textContent = `${state.score} pts.`;
+        return;
     }
 }
 
