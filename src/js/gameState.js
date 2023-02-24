@@ -14,6 +14,8 @@ function initState() {
         bug: {
             width: 50,
             height: 50,
+            nextSpawned: 0,
+            maxInterval: 1500,
         },
         keys: {
             keyA: false,
