@@ -4,7 +4,5 @@ function start(state, game) {
 }
 
 function gameLoop(state, game) {
-    console.log('frame');
-
     window.requestAnimationFrame(gameLoop);
 }
