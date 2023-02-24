@@ -19,10 +19,11 @@ function initState() {
             speed: 5,
         },
         keys: {
-            keyA: false,
-            keyS: false,
-            keyD: false,
-            keyW: false,
+            KeyA: false,
+            KeyS: false,
+            KeyD: false,
+            KeyW: false,
+            Space: false,
         },
     }
 

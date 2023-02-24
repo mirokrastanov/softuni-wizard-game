@@ -10,6 +10,13 @@ function gameLoop(state, game, timestamp) {
     // Move Wizard
     updateWizardPosition(state, game);
 
+    // Wizard spell casting
+    if (state.keys.Space) {
+        wizardEl.style.backgroundImage = 'url("/src/images/wizard-fire.png")';
+    } else {
+        wizardEl.style.backgroundImage = 'url("/src/images/wizard.png")';
+    }
+
     // Spawns bugs
     if (timestamp > state.bug.nextSpawned) {
         game.createBug(state.bug);

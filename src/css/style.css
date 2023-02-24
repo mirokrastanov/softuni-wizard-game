@@ -39,14 +39,14 @@
 
 .wizard {
     position: absolute;
-    background-image: url('../images/wizard.png');
+    background-image: url('/src/images/wizard.png');
     width: 82px;
     height: 100px;
 }
 
 .bug {
     position: absolute;
-    background-image: url('../images/bug.png');
+    background-image: url('/src/images/bug.png');
     background-size: cover;
 }
 
