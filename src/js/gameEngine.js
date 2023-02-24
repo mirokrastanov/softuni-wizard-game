@@ -10,7 +10,7 @@ function gameLoop(state, game, timestamp) {
     // Move Wizard
     updateWizardPosition(state, game);
 
-    // Spawns NPCs
+    // Spawns bugs
     if (timestamp > state.bug.nextSpawned) {
         game.createBug(state.bug);
         state.bug.nextSpawned = timestamp + Math.random() * state.bug.maxInterval;
@@ -19,6 +19,15 @@ function gameLoop(state, game, timestamp) {
     // Render
     wizardEl.style.left = wizard.posX + 'px';
     wizardEl.style.top = wizard.posY + 'px';
+
+    // Render bugs
+    // TODO - add an array to hold spawned bugs and move them separateyly, based on their x,y coords
+    // currently done - same, but moving ALL together, instead of separately
+    document.querySelectorAll('.bug').forEach(bug => {
+        let posX = parseInt(bug.style.left);
+        bug.style.left = posX - state.bug.speed + 'px';
+    });
+
 
     window.requestAnimationFrame(gameLoop.bind(null, state, game));
 }

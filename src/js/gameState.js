@@ -16,6 +16,7 @@ function initState() {
             height: 50,
             nextSpawned: 0,
             maxInterval: 1500,
+            speed: 5,
         },
         keys: {
             keyA: false,
