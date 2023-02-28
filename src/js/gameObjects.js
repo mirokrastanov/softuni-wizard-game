@@ -5,6 +5,7 @@ function initGameObjects() {
     const finalScoreElement = document.querySelector('.score-final');
     const gameoverScreen = document.querySelector('.gameover-screen'); 
     const playAgain = document.querySelector('.start-over');
+    const anotherTab = document.querySelector('.start-new-tab');
 
     return {
         startScreen,
@@ -12,6 +13,7 @@ function initGameObjects() {
         gameoverScreen,
         gameScreen,
         playAgain,
+        anotherTab,
         scoreElement, 
         createWizard(initialState) {
             let wizardEl = document.createElement('div');

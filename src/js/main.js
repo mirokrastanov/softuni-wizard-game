@@ -24,8 +24,13 @@ game.playAgain.addEventListener('click', (e) => {
     window.location.reload();
 });
 
+game.anotherTab.addEventListener('click', (e) => {
+    window.open('https://solitaire.mirokrastanov.repl.co/', '_blank');
+});
+
 game.startScreen.addEventListener('click', (e) => {
     game.startScreen.classList.add('hidden');
+    game.anotherTab.classList.add('hidden');
     game.gameScreen.classList.remove('hidden');
 
     // start game
