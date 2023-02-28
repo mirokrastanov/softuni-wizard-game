@@ -1,6 +1,6 @@
 function initState() {
-    let startX = Math.floor(Math.random() * 500);
-    let startY = Math.floor(Math.random() * 500);
+    let startX = 50;
+    let startY = 200;
 
     const state = {
         player: 'Dozer',
