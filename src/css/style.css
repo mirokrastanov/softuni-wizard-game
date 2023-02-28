@@ -35,6 +35,7 @@
     padding: 10px;
     border-radius: 12px;
     width: 400px;
+    margin-top: 10px;
 }
 
 .start-screen:hover,
@@ -112,4 +113,16 @@
 
 .hidden {
     display: none;
+}
+
+@media all and (max-height: 530px) {
+    .start-new-tab {
+        top: 70%;
+    }
+    .score-final {
+        top: 20%;
+    }
+    .start-over {
+        top: 70%;
+    }
 }
