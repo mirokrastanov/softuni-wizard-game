@@ -25,7 +25,7 @@ game.playAgain.addEventListener('click', (e) => {
 });
 
 game.anotherTab.addEventListener('click', (e) => {
-    window.open('https://solitaire.mirokrastanov.repl.co/', '_blank');
+    window.open('https://softuni-wizard-game.mirokrastanov.repl.co/', '_blank');
 });
 
 game.startScreen.addEventListener('click', (e) => {
