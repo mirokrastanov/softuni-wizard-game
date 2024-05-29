@@ -1,6 +1,11 @@
 # SoftUni Wizard Game
 JS Advanced - Mini Game Project - A side-scrolling game created using JS.
-<p align="center"><a href="https://softuni-wizard-game.mirokrastanov.repl.co/"><img src="https://github.com/mirokrastanov/softuni-wizard-game/blob/main/src/images/wizard-cover-royalty-free-pixabay.jpg?raw=true" alt="game-image" height="600px"></a></p>
+<p align="center"><a href="https://softuni-wizard-miro.glitch.me/"><img src="https://github.com/mirokrastanov/softuni-wizard-game/blob/main/src/images/wizard-cover-royalty-free-pixabay.jpg?raw=true" alt="game-image" height="600px"></a></p>
+
+## Live Demo
+[<img src="https://freepngimg.com/download/play_now_button/25403-5-play-now-button-transparent.png" alt="run-button" height="40px" />](https://softuni-wizard-miro.glitch.me/)
+### The Demo is also available in my app library 
+- Check out the [App Library](https://app-library-13e36.web.app/)
 
 ## Description
 - The game is a side-scroller where the player controls <b>THE <a href="https://softuni.bg/">SOFTUNI</a> WIZARD</b>, attempting to fly between infesting bugs without getting hit by them.
@@ -35,7 +40,7 @@ JS Advanced - Mini Game Project - A side-scrolling game created using JS.
   
   
 ## Live Demo
-[<img src="https://freepngimg.com/download/play_now_button/25403-5-play-now-button-transparent.png" alt="run-button" height="40px" />](https://softuni-wizard-game.mirokrastanov.repl.co/)
+[<img src="https://freepngimg.com/download/play_now_button/25403-5-play-now-button-transparent.png" alt="run-button" height="40px" />](https://softuni-wizard-miro.glitch.me/)
   
   
 ## [Source Code](https://github.com/mirokrastanov/softuni-wizard-game/tree/main/src)
